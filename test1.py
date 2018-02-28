@@ -30,7 +30,7 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(LedPin, GPIO.OUT)
 GPIO.setup(PRpin, GPIO.IN)
 
-while true:
+while True:
 	#Test 1 LED Blink
 	for k in range(0,5):
 		GPIO.output(LedPin, GPIO.HIGH)
