@@ -54,12 +54,12 @@ while True:
 		time.sleep(.2)
 
 	for m in range(50):
-		if mcp.read_adc(1) > 500 :
+		if mcp.read_adc(1) > 800 :
 			print("LED ON")
 			GPIO.output(LedPin, GPIO.HIGH)
-			time.sleep(1)
-			GPIO.output(LedPin, GPIO.LOW)
 			time.sleep(.2)
+			GPIO.output(LedPin, GPIO.LOW)
+			time.sleep(.1)
 		else:
 			print(mcp.read_adc(1))
 		# print(GPIO.input(PRpin) )
