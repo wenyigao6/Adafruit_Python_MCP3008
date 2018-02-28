@@ -24,12 +24,12 @@ def destroy():
 	GPIO.output(LedPin, GPIO.LOW)
 	GPIO.cleanup()
 
-def RCtime (RCpin):
+def RCtime (t, RCpin):
 	# GPIO.setmode(GPIO.BCM)
 	reading = 0
 	GPIO.setup(RCpin, GPIO.OUT)
 	GPIO.output(RCpin, GPIO.LOW)
-	time.sleep(0.1)
+	time.sleep(t)
 
 	GPIO.setup(RCpin, GPIO.IN)
 	# This takes about 1 millisecond per loop cycle
@@ -37,16 +37,15 @@ def RCtime (RCpin):
 		reading += 1
 	return reading
 
-def 
 
 if __name__ == '__main__':
 	setup()
 	# t = True
 	while True:
 		try:	
-			[blink(0.5) for i in range(5)]
-			[print(RCtime(18)) for i in range(50)]
-			[blink(1) for i in range(4)]
+			[blink(0.5, 11) for i in range(5)]
+			[print(RCtime(0.1, 21)) for i in range(50)]
+			[blink(1, 11) for i in range(4)]
 
 		except KeyboardInterrupt:
 			destroy()
