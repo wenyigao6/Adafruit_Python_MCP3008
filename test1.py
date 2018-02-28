@@ -40,7 +40,7 @@ while true:
 
 	#Photo Resistor Test
 	for i in range(50):
-		prnit(mcp.read_adc(RCpin) )
+		prnit(mcp.read_adc(PRpin) )
 		# print(GPIO.input(PRpin) )
 		time.sleep(.1)
 
