@@ -8,11 +8,13 @@ LedPin = 11  # pin11
 
 def setup():
 	GPIO.setmode(GPIO.BOARD)
-	GPIO.setup(LedPin, GPIO.OUT)
-	GPIO.output(LedPin, GPIO.HIGH)
+	
+	# GPIO.output(LedPin, GPIO.HIGH)
 
 def blink(t):
 	# while True:
+	GPIO.setup(LedPin, GPIO.OUT)
+	
 	GPIO.output(LedPin, GPIO.HIGH)
 	time.sleep(t)
 	GPIO.output(LedPin, GPIO.LOW)
