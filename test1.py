@@ -34,15 +34,33 @@ while True:
 	#Test 1 LED Blink
 	for k in range(0,5):
 		GPIO.output(LedPin, GPIO.HIGH)
-		time.sleep(.1)
+		time.sleep(.5)
 		GPIO.output(LedPin, GPIO.LOW)
-		time.sleep(.1)
+		time.sleep(.5)
 
 	#Photo Resistor Test
 	for i in range(50):
-		print(mcp.read_adc(0) )
+		if mcp.read_adc(0) < 550 :
+			print("lo ")
+		else:
+			print("HI")
 		# print(GPIO.input(PRpin) )
 		time.sleep(.1)
+
+	for j in range(0,5):
+		GPIO.output(LedPin, GPIO.HIGH)
+		time.sleep(.2)
+		GPIO.output(LedPin, GPIO.LOW)
+		time.sleep(.2)
+
+	for m in range(50):
+		print(mcp.read_adc(1))
+		# print(GPIO.input(PRpin) )
+		time.sleep(.1)
+
+
+
+
 
 
 
