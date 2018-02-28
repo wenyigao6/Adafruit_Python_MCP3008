@@ -37,7 +37,7 @@ def RCtime (RCpin):
 if __name__ == '__main__':
 	setup()
 	# t = True
-	while True
+	while True:
 		try:	
 			[blink(0.5) for i in range(5)]
 			[print(RCtime(18)) for i in range(50)]
