@@ -22,7 +22,7 @@ def destroy():
 if __name__ == '__main__':
 	setup()
 	try:
-		for i in range(5)
+		for i in range(5):
 			blink(0.1)
 		[blink(0.1) for i in range(4)]
 
