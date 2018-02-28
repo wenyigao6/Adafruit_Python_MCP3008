@@ -20,8 +20,8 @@ mcp = Adafruit_MCP3008.MCP3008(spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE))
 # LedPin = 11  # pin11
 
 LedPin = 11
-PRpin = 0
-SSpin = 1
+PRpin = 21
+SSpin = 19
 
 
 
