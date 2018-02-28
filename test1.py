@@ -28,7 +28,7 @@ SSpin = 1
 #SETUP
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(LedPin, GPIO.OUT)
-GPIO.setup(RCpin, GPIO.IN)
+GPIO.setup(PRpin, GPIO.IN)
 
 while true:
 	#Test 1 LED Blink
