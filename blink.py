@@ -2,17 +2,20 @@ import RPi.GPIO as GPIO
 import time
 
 LedPin = 11  # pin11
-GPIO.setmode(GPIO.BCM)
 
 
 
-def setup():
-	GPIO.setmode(GPIO.BOARD)
-	GPIO.setup(LedPin, GPIO.OUT)
-	GPIO.output(LedPin, GPIO.HIGH)
+
+# def setup():
+# 	GPIO.setmode(GPIO.BOARD)
+# 	GPIO.setup(LedPin, GPIO.OUT)
+# 	GPIO.output(LedPin, GPIO.HIGH)
 
 def blink(t):
 	# while True:
+	GPIO.setmode(GPIO.BOARD)
+	GPIO.setup(LedPin, GPIO.OUT)
+	GPIO.output(LedPin, GPIO.HIGH)
 	GPIO.output(LedPin, GPIO.HIGH)
 	time.sleep(t)
 	GPIO.output(LedPin, GPIO.LOW)
@@ -23,6 +26,7 @@ def destroy():
 	GPIO.cleanup()
 
 def RCtime (RCpin):
+	GPIO.setmode(GPIO.BCM)
 	reading = 0
 	GPIO.setup(RCpin, GPIO.OUT)
 	GPIO.output(RCpin, GPIO.LOW)
@@ -35,7 +39,7 @@ def RCtime (RCpin):
 	return reading
 
 if __name__ == '__main__':
-	setup()
+	# setup()
 	# t = True
 	while True:
 		try:	
