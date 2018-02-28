@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
-LedPin = 11  # pin11
+# LedPin = 11  # pin11
 
 
 
@@ -11,10 +11,10 @@ def setup():
 	
 	# GPIO.output(LedPin, GPIO.HIGH)
 
-def blink(t):
+def blink(t, LedPin):
 	# while True:
 	GPIO.setup(LedPin, GPIO.OUT)
-	
+
 	GPIO.output(LedPin, GPIO.HIGH)
 	time.sleep(t)
 	GPIO.output(LedPin, GPIO.LOW)
@@ -36,6 +36,8 @@ def RCtime (RCpin):
 	while (GPIO.input(RCpin) == GPIO.LOW):
 		reading += 1
 	return reading
+
+def 
 
 if __name__ == '__main__':
 	setup()
