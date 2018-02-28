@@ -26,7 +26,7 @@ SSpin = 19
 
 
 #SETUP
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(LedPin, GPIO.OUT)
 GPIO.setup(PRpin, GPIO.IN)
 
@@ -40,7 +40,7 @@ while True:
 
 	#Photo Resistor Test
 	for i in range(50):
-		prnit(mcp.read_adc(PRpin) )
+		print(mcp.read_adc(PRpin) )
 		# print(GPIO.input(PRpin) )
 		time.sleep(.1)
 
